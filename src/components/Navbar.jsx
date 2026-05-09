@@ -46,11 +46,12 @@ export default function Navbar() {
           ))}
         </ul>
         <a
-          href="/resume.pdf"
-          download
+          href="https://github.com/shawon787-cyber"
+          target="_blank"
+          rel="noopener noreferrer"
           className="hidden md:inline-flex items-center text-sm font-mono px-4 py-2 border border-neon text-neon rounded-sm hover:bg-neon hover:text-black transition-all shadow-neon-sm"
         >
-          Resume
+          GitHub
         </a>
         <button className="md:hidden text-neon" onClick={() => setOpen(!open)} aria-label="Menu">
           {open ? <X size={24} /> : <Menu size={24} />}
