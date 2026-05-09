@@ -1,9 +1,20 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import {
-  Atom, Code2, FileCode2, Boxes, Server, Database, Layers,
-  ShoppingBag, Globe, Figma, Zap, Cpu, Palette,
-   MonitorSpeaker
+  Atom,
+  Code2,
+  FileCode2,
+  Boxes,
+  Server,
+  Database,
+  Layers,
+  ShoppingBag,
+  Globe,
+  Figma,
+  Zap,
+  Cpu,
+  Palette,
+  MonitorSpeaker,
 } from "lucide-react";
 import SectionTitle from "./SectionTitle";
 
@@ -36,17 +47,25 @@ export default function Skills() {
           {/* Single marquee row */}
           <motion.div
             className="flex gap-6"
-            animate={isHovered ? {} : {
-              x: [0, -100 * skills.length],
-            }}
-            transition={isHovered ? {} : {
-              x: {
-                repeat: Infinity,
-                repeatType: "loop",
-                duration: 20,
-                ease: "linear",
-              },
-            }}
+            animate={
+              isHovered
+                ? {}
+                : {
+                    x: [0, -100 * skills.length],
+                  }
+            }
+            transition={
+              isHovered
+                ? {}
+                : {
+                    x: {
+                      repeat: Infinity,
+                      repeatType: "loop",
+                      duration: 20,
+                      ease: "linear",
+                    },
+                  }
+            }
             onHoverStart={() => setIsHovered(true)}
             onHoverEnd={() => setIsHovered(false)}
           >

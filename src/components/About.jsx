@@ -42,12 +42,25 @@ export default function About() {
             className="md:col-span-3 space-y-5 text-muted-foreground leading-relaxed text-base sm:text-lg"
           >
             <p>
-              I’m a MERN Stack and WordPress Developer passionate about building modern, responsive, and user-focused web applications. With nearly 1 year of professional experience, I’ve worked on real-world projects ranging from custom WordPress websites to dynamic full-stack applications using <span className="text-neon">React.js, Next.js, MongoDB, Express.js, and Node.js</span>.
+              I’m a MERN Stack and WordPress Developer passionate about building modern, responsive,
+              and user-focused web applications. With nearly 1 year of professional experience, I’ve
+              worked on real-world projects ranging from custom WordPress websites to dynamic
+              full-stack applications using{" "}
+              <span className="text-neon">React.js, Next.js, MongoDB, Express.js, and Node.js</span>
+              .
             </p>
             <p>
-              I also worked remotely with a <span className="text-neon">Germany</span>-based company as a <span className="text-neon">WordPress & Web Developer</span>, where I gained hands-on experience developing custom websites, optimizing performance, and creating clean, scalable solutions for clients. Alongside WordPress, I enjoy crafting interactive frontend experiences with modern JavaScript technologies and converting Figma designs into pixel-perfect interfaces.
+              I also worked remotely with a <span className="text-neon">Germany</span>-based company
+              as a <span className="text-neon">WordPress & Web Developer</span>, where I gained
+              hands-on experience developing custom websites, optimizing performance, and creating
+              clean, scalable solutions for clients. Alongside WordPress, I enjoy crafting
+              interactive frontend experiences with modern JavaScript technologies and converting
+              Figma designs into pixel-perfect interfaces.
             </p>
-            <p>I’m constantly exploring new technologies, improving my development <span className="text-neon">skills</span>, and building products that combine performance, usability, and clean design.
+            <p>
+              I’m constantly exploring new technologies, improving my development{" "}
+              <span className="text-neon">skills</span>, and building products that combine
+              performance, usability, and clean design.
             </p>
           </motion.div>
 

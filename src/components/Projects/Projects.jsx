@@ -1,4 +1,3 @@
-
 // "use client";
 
 // import React, { useRef } from "react";
@@ -280,12 +279,7 @@ import {
   FaNodeJs,
 } from "react-icons/fa6";
 
-import {
-  SiNextdotjs,
-  SiTailwindcss,
-  SiMongodb,
-  SiFirebase,
-} from "react-icons/si";
+import { SiNextdotjs, SiTailwindcss, SiMongodb, SiFirebase } from "react-icons/si";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
@@ -304,18 +298,9 @@ const projects = [
 
     desc: "Modern developer portfolio showcasing creative projects, clean UI, animations, and premium user experience.",
 
-    features: [
-      "Responsive Design",
-      "Smooth Animations",
-      "Modern UI/UX",
-      "Interactive Sections",
-    ],
+    features: ["Responsive Design", "Smooth Animations", "Modern UI/UX", "Interactive Sections"],
 
-    tech: [
-      <SiNextdotjs key="next" />,
-      <SiTailwindcss key="tailwind" />,
-      <FaReact key="react" />,
-    ],
+    tech: [<SiNextdotjs key="next" />, <SiTailwindcss key="tailwind" />, <FaReact key="react" />],
 
     live: "https://tech-agent-shawon-portfolio.netlify.app/",
 
@@ -358,18 +343,9 @@ const projects = [
 
     desc: "Modern learning platform with elegant UI, responsive layouts, and smooth learning experience.",
 
-    features: [
-      "Course Management",
-      "Authentication",
-      "Responsive Design",
-      "Modern Interface",
-    ],
+    features: ["Course Management", "Authentication", "Responsive Design", "Modern Interface"],
 
-    tech: [
-      <SiNextdotjs key="next" />,
-      <SiMongodb key="mongodb" />,
-      <FaNodeJs key="node" />,
-    ],
+    tech: [<SiNextdotjs key="next" />, <SiMongodb key="mongodb" />, <FaNodeJs key="node" />],
 
     live: "https://skill-sphere-two-gamma.vercel.app/",
 
@@ -382,10 +358,7 @@ const Projects = () => {
   const nextRef = useRef(null);
 
   return (
-    <section
-      id="projects"
-      className="relative py-24 overflow-hidden"
-    >
+    <section id="projects" className="relative py-24 overflow-hidden">
       {/* Background Glow */}
       <div className="absolute top-0 left-[-200px] h-full w-[400px] bg-gradient-to-r from-neon/10 via-neon/5 to-transparent blur-[100px] opacity-40" />
 
@@ -406,7 +379,6 @@ const Projects = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-
         {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -415,23 +387,19 @@ const Projects = () => {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <p className="text-neon font-mono uppercase tracking-[4px] text-sm">
-            Featured Work
-          </p>
+          <p className="text-neon font-mono uppercase tracking-[4px] text-sm">Featured Work</p>
 
           <h2 className="mt-3 text-4xl md:text-6xl font-bold text-white">
             My <span className="text-neon glow-text">Projects</span>
           </h2>
 
           <p className="mt-5 text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            A collection of modern web applications,
-            creative interfaces, and full-stack solutions.
+            A collection of modern web applications, creative interfaces, and full-stack solutions.
           </p>
         </motion.div>
 
         {/* Carousel */}
         <div className="relative mt-20 px-2 lg:px-20 pb-20">
-
           {/* Left Arrow */}
           <button
             ref={prevRef}
@@ -472,7 +440,6 @@ const Projects = () => {
           >
             {projects.map((project, index) => (
               <SwiperSlide key={index}>
-
                 <motion.div
                   initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -483,12 +450,9 @@ const Projects = () => {
                   }}
                   className="group relative overflow-hidden rounded-3xl border border-neon/10 bg-white/[0.03] backdrop-blur-xl shadow-[0_0_30px_rgba(37,214,113,0.05)]"
                 >
-
                   <div className="grid lg:grid-cols-2 items-center">
-
                     {/* Left Image */}
                     <div className="relative overflow-hidden h-full">
-
                       <Image
                         src={project.img}
                         alt={project.title}
@@ -499,49 +463,36 @@ const Projects = () => {
                       />
 
                       <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent" />
-
                     </div>
 
                     {/* Right Content */}
                     <div className="p-8 lg:p-12">
-
                       <p className="text-neon text-xs uppercase tracking-[4px] font-mono">
                         {project.category}
                       </p>
 
-                      <h2 className="mt-4 text-4xl font-bold text-white">
-                        {project.title}
-                      </h2>
+                      <h2 className="mt-4 text-4xl font-bold text-white">{project.title}</h2>
 
-                      <p className="mt-5 text-muted-foreground leading-relaxed">
-                        {project.desc}
-                      </p>
+                      <p className="mt-5 text-muted-foreground leading-relaxed">{project.desc}</p>
 
                       {/* Features */}
                       <div className="mt-8 space-y-3">
-
                         {project.features.map((feature, i) => (
-                          <div
-                            key={i}
-                            className="flex items-center gap-3 text-sm text-gray-300"
-                          >
+                          <div key={i} className="flex items-center gap-3 text-sm text-gray-300">
                             <div className="w-2 h-2 rounded-full bg-neon" />
 
                             {feature}
                           </div>
                         ))}
-
                       </div>
 
                       {/* Tech Stack */}
                       <div className="mt-10">
-
                         <p className="text-sm uppercase tracking-[3px] text-neon font-mono mb-5">
                           Tech Stack
                         </p>
 
                         <div className="flex items-center gap-5 text-3xl text-neon">
-
                           {project.tech.map((icon, i) => (
                             <div
                               key={i}
@@ -550,14 +501,11 @@ const Projects = () => {
                               {icon}
                             </div>
                           ))}
-
                         </div>
-
                       </div>
 
                       {/* Buttons */}
                       <div className="mt-10 flex flex-wrap items-center gap-4">
-
                         <a
                           href={project.live}
                           target="_blank"
@@ -577,21 +525,14 @@ const Projects = () => {
                           <FaGithub />
                           GitHub Repo
                         </a>
-
                       </div>
-
                     </div>
-
                   </div>
-
                 </motion.div>
-
               </SwiperSlide>
             ))}
           </Swiper>
-
         </div>
-
       </div>
     </section>
   );

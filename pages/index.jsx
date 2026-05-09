@@ -11,8 +11,6 @@ import SocialBar from "@/components/SocialBar";
 import Projects from "@/components/Projects/Projects";
 import DigitalExperience from "@/components/DigitalExperience";
 
-
-
 const ParticleBackground = dynamic(() => import("@/components/ParticleBackground"), { ssr: false });
 
 export default function Home() {
@@ -54,28 +52,27 @@ export default function Home() {
         <Footer />
       </div> */}
       <div className="relative min-h-screen overflow-hidden text-foreground">
+        {/* Background Animation */}
+        <div className="fixed inset-0 -z-100">
+          <ParticleBackground />
+        </div>
 
-  {/* Background Animation */}
-  <div className="fixed inset-0 -z-100">
-    <ParticleBackground />
-  </div>
+        <Toaster theme="dark" position="bottom-right" />
 
-  <Toaster theme="dark" position="bottom-right" />
+        <Navbar />
+        <SocialBar />
 
-  <Navbar />
-  <SocialBar />
+        <main className="relative z-10">
+          <Hero />
+          <About />
+          <Projects />
+          <Skills />
+          <DigitalExperience />
+          <Contact />
+        </main>
 
-  <main className="relative z-10">
-    <Hero />
-    <About />
-    <Projects />
-    <Skills />
-    <DigitalExperience />
-    <Contact />
-  </main>
-
-  <Footer />
-</div>
+        <Footer />
+      </div>
     </>
   );
 }

@@ -39,7 +39,6 @@ export default function Navbar() {
           {links.map((l, i) => (
             <li key={l.href}>
               <a href={l.href} className="text-muted-foreground hover:text-neon transition-colors">
-                
                 {l.label}
               </a>
             </li>
