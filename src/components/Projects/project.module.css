@@ -1,0 +1,11 @@
+.swiper-pagination-bullet {
+  background: #25d671 !important;
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+  background: #25d671 !important;
+  opacity: 1;
+  width: 22px;
+  border-radius: 999px;
+}

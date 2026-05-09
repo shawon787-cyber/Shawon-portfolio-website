@@ -1,0 +1,150 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+@plugin "daisyui";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-neon: var(--neon);
+  --font-display: "Space Grotesk", "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+:root {
+  --radius: 0.75rem;
+  --background: oklch(0 0 0);
+  --foreground: oklch(0.97 0.005 110);
+  --card: oklch(0.08 0.005 110 / 60%);
+  --card-foreground: oklch(0.97 0.005 110);
+  --popover: oklch(0.08 0.005 110);
+  --popover-foreground: oklch(0.97 0.005 110);
+  --primary: oklch(0.95 0.27 130);
+  --primary-foreground: oklch(0 0 0);
+  --secondary: oklch(0.15 0.005 110);
+  --secondary-foreground: oklch(0.97 0.005 110);
+  --muted: oklch(0.13 0.005 110);
+  --muted-foreground: oklch(0.65 0.01 110);
+  --accent: oklch(0.95 0.27 130);
+  --accent-foreground: oklch(0 0 0);
+  --destructive: oklch(0.6 0.24 27);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: oklch(0.95 0.27 130 / 15%);
+  --input: oklch(0.18 0.005 110);
+  --ring: oklch(0.95 0.27 130 / 60%);
+  --neon: #ccff00;
+
+  --gradient-radial: radial-gradient(circle at 50% 0%, oklch(0.95 0.27 130 / 12%), transparent 60%);
+  --shadow-neon: 0 0 20px oklch(0.95 0.27 130 / 45%), 0 0 60px oklch(0.95 0.27 130 / 25%);
+  --shadow-neon-sm: 0 0 10px oklch(0.95 0.27 130 / 35%);
+}
+
+.dark {
+  --background: oklch(0 0 0);
+  --foreground: oklch(0.97 0.005 110);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-display);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  ::selection {
+    background: var(--neon);
+    color: #000;
+  }
+}
+
+@layer utilities {
+  .text-neon {
+    color: var(--neon);
+  }
+  .bg-neon {
+    background-color: var(--neon);
+  }
+  .border-neon {
+    border-color: var(--neon);
+  }
+  .shadow-neon {
+    box-shadow: var(--shadow-neon);
+  }
+  .shadow-neon-sm {
+    box-shadow: var(--shadow-neon-sm);
+  }
+  .glow-text {
+    text-shadow:
+      0 0 10px var(--neon),
+      0 0 30px oklch(0.95 0.27 130 / 50%);
+  }
+  .gradient-radial {
+    background: var(--gradient-radial);
+  }
+  .grid-bg {
+    background-image:
+      linear-gradient(oklch(0.95 0.27 130 / 5%) 1px, transparent 1px),
+      linear-gradient(90deg, oklch(0.95 0.27 130 / 5%) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+  .glass {
+    background: oklch(0.05 0.005 110 / 60%);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid oklch(0.95 0.27 130 / 15%);
+  }
+  .neon-border-hover {
+    transition: all 0.3s ease;
+  }
+  .neon-border-hover:hover {
+    border-color: var(--neon);
+    box-shadow: var(--shadow-neon-sm);
+  }
+}
+
+@font-face {
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url("https://fonts.gstatic.com/s/spacegrotesk/v16/V8mDoQDjQSkFtoMM3T6r8E7mF71Q-gOoraIAEj7aUUM.woff2")
+    format("woff2");
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("https://fonts.gstatic.com/s/jetbrainsmono/v18/tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKxjPVmUsaaDhw.woff2")
+    format("woff2");
+}
