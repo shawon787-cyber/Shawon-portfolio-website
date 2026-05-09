@@ -76,14 +76,8 @@ export default function Footer() {
             {/* Logo */}
             <div className="flex items-center gap-4">
 
-              <img
-                src="/logo.png"
-                alt="logo"
-                className="w-14 h-14 object-contain"
-              />
-
               <h2 className="text-3xl font-bold text-neon">
-                TECH AGENT
+                MD SHAON
               </h2>
 
             </div>
