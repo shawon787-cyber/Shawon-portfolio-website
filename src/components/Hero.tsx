@@ -14,7 +14,7 @@ const ROLES = [
   "Shopify & WordPress Dev",
 ];
 
-function useTyping(words, speed = 80, pause = 1600) {
+function useTyping(words: string[], speed = 80, pause = 1600) {
   const [text, setText] = useState("");
   const [i, setI] = useState(0);
   const [del, setDel] = useState(false);
