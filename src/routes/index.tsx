@@ -52,7 +52,6 @@ function Index() {
       <main>
         <Hero />
         <About />
-        
         <Skills />
         <Contact />
       </main>

@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Download, ArrowRight, MapPin } from "lucide-react";
@@ -92,9 +91,7 @@ export default function Hero() {
             >
               <span className="text-muted-foreground">{">"} </span>
 
-              <span className="text-neon glow-text">
-                {typed}
-              </span>
+              <span className="text-neon glow-text">{typed}</span>
 
               <span className="inline-block w-[3px] h-7 bg-neon ml-1 animate-pulse align-middle" />
             </motion.div>
@@ -105,8 +102,7 @@ export default function Hero() {
               transition={{ duration: 0.7, delay: 0.4 }}
               className="mt-6 max-w-2xl text-muted-foreground text-base sm:text-lg leading-relaxed"
             >
-              Building pixel-perfect interfaces and scalable web applications
-              with <br />
+              Building pixel-perfect interfaces and scalable web applications with <br />
               React, Next.js, and the MERN stack.
             </motion.p>
 
@@ -116,11 +112,7 @@ export default function Hero() {
               transition={{ duration: 0.7, delay: 0.5 }}
               className="mt-4 flex items-center gap-2 text-sm text-muted-foreground font-mono"
             >
-              <MapPin
-                size={14}
-                className="text-neon"
-              />
-
+              <MapPin size={14} className="text-neon" />
               Sylhet, Bangladesh — available worldwide
             </motion.div>
 
@@ -144,11 +136,7 @@ export default function Hero() {
                 className="group inline-flex items-center gap-2 px-7 py-4 rounded-md border border-neon text-neon font-semibold hover:bg-neon/10 transition-all"
               >
                 Get in touch
-
-                <ArrowRight
-                  size={18}
-                  className="group-hover:translate-x-1 transition-transform"
-                />
+                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </a>
             </motion.div>
           </div>
@@ -162,8 +150,7 @@ export default function Hero() {
             <div
               className="absolute w-[420px] h-[420px] bg-gradient-to-br from-neon/30 via-neon/10 to-transparent opacity-80"
               style={{
-                borderRadius:
-                  "58% 42% 65% 35% / 40% 45% 55% 60%",
+                borderRadius: "58% 42% 65% 35% / 40% 45% 55% 60%",
                 animation: "morph 8s ease-in-out infinite",
               }}
             />
@@ -172,8 +159,7 @@ export default function Hero() {
             <div
               className="absolute w-[360px] h-[360px] border border-neon/20"
               style={{
-                borderRadius:
-                  "40% 60% 30% 70% / 55% 30% 70% 45%",
+                borderRadius: "40% 60% 30% 70% / 55% 30% 70% 45%",
                 animation: "morph2 10s ease-in-out infinite",
               }}
             />
@@ -182,42 +168,39 @@ export default function Hero() {
             <div className="absolute bottom-8 -right-10 hidden lg:block z-50">
               <div className="bg-[#0f1115]/40 border border-neon/10 backdrop-blur-xl rounded-md px-5 py-4 shadow-[0_0_30px_rgba(37,214,113,0.08)]">
                 <div className="flex items-center gap-3 text-neon text-xl">
-                   <FiGithub />
-                   <FiLinkedin />
-                   <FiFacebook />
-                   <FaWhatsapp />
+                  <FiGithub />
+                  <FiLinkedin />
+                  <FiFacebook />
+                  <FaWhatsapp />
                 </div>
               </div>
             </div>
 
-            
             <div className="relative z-20">
-  {/* Image */}
-  <img
-    src="https://i.ibb.co.com/4xFxzQZ/my-Image.png"
-    alt="Developer"
-    className="
+              {/* Image */}
+              <img
+                src="https://i.ibb.co.com/4xFxzQZ/my-Image.png"
+                alt="Developer"
+                className="
       w-[320px] sm:w-[380px] md:w-[430px]
       object-cover
       drop-shadow-[0_0_40px_rgba(37,214,113,0.25)]
       [mask-image:linear-gradient(to_bottom,black_75%,transparent_100%)]
       [-webkit-mask-image:linear-gradient(to_bottom,black_75%,transparent_100%)]
     "
-  />
+              />
 
-  {/* Extra Bottom Glow */}
-  <div className="absolute bottom-0 left-0 w-full h-24 bg-neon/10 blur-2xl -z-10" />
-</div>
+              {/* Extra Bottom Glow */}
+              <div className="absolute bottom-0 left-0 w-full h-24 bg-neon/10 blur-2xl -z-10" />
+            </div>
 
             {/* Available Badge */}
-            <div className="absolute top-10 -left-6 md:left-10 lg:-left-16 z-50 hidden md:block">
+            <div className="absolute top-10 md:left-10 lg:-left-8 z-50 hidden md:block">
               <div className="flex items-center gap-3 bg-[#0f1115]/50 border border-neon/20 backdrop-blur-xl rounded-full px-4 py-2 shadow-[0_0_30px_rgba(37,214,113,0.08)]">
                 <span className="w-3 h-3 rounded-full bg-neon animate-pulse" />
 
                 <div>
-                  <p className="text-sm text-white font-medium">
-                    Available for work
-                  </p>
+                  <p className="text-sm text-white font-medium">Available for work</p>
                 </div>
               </div>
             </div>

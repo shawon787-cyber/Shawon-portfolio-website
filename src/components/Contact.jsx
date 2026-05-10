@@ -202,8 +202,8 @@ export default function Contact() {
           viewport={{ once: true }}
           className="text-muted-foreground max-w-xl mx-auto -mt-6 mb-10"
         >
-          Have a project in mind, a role to fill, or just want to say hi?
-          My inbox is always open — I'll get back to you as soon as I can.
+          Have a project in mind, a role to fill, or just want to say hi? My inbox is always open —
+          I'll get back to you as soon as I can.
         </motion.p>
 
         <motion.form
@@ -254,9 +254,7 @@ export default function Contact() {
           />
 
           <div>
-            <label className="text-xs font-mono text-neon uppercase tracking-wider">
-              Message
-            </label>
+            <label className="text-xs font-mono text-neon uppercase tracking-wider">Message</label>
 
             <textarea
               rows={5}
@@ -279,10 +277,7 @@ export default function Contact() {
           >
             {loading ? (
               <>
-                <Loader2
-                  size={18}
-                  className="animate-spin"
-                />
+                <Loader2 size={18} className="animate-spin" />
                 Sending...
               </>
             ) : (
@@ -294,17 +289,9 @@ export default function Contact() {
           </button>
 
           <p className="text-xs text-muted-foreground flex items-center gap-2 pt-2">
-            <Mail
-              size={14}
-              className="text-neon"
-            />
-
+            <Mail size={14} className="text-neon" />
             Or email directly:{" "}
-
-            <a
-              href="mailto:shawonmohammad787@gmail.com"
-              className="text-neon hover:underline"
-            >
+            <a href="mailto:shawonmohammad787@gmail.com" className="text-neon hover:underline">
               shawonmohammad787@gmail.com
             </a>
           </p>
@@ -314,18 +301,10 @@ export default function Contact() {
   );
 }
 
-function Field({
-  label,
-  value,
-  onChange,
-  placeholder,
-  type = "text",
-}) {
+function Field({ label, value, onChange, placeholder, type = "text" }) {
   return (
     <div>
-      <label className="text-xs font-mono text-neon uppercase tracking-wider">
-        {label}
-      </label>
+      <label className="text-xs font-mono text-neon uppercase tracking-wider">{label}</label>
 
       <input
         type={type}
