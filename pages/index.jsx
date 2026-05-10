@@ -36,21 +36,7 @@ export default function Home() {
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      {/* <div className="relative min-h-screen text-foreground">
-        <ParticleBackground />
-        <Toaster theme="dark" position="bottom-right" />
-        <Navbar />
-        <SocialBar />
-        <main>
-          <Hero />
-          <About />
-          <Projects />
-          <Experience />
-          <Skills />
-          <Contact />
-        </main>
-        <Footer />
-      </div> */}
+      
       <div className="relative min-h-screen overflow-hidden text-foreground">
         {/* Background Animation */}
         <div className="fixed inset-0 -z-100">
